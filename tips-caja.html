@@ -10,56 +10,80 @@
   body { background:#e8e8e8; font-family:'Montserrat',sans-serif; display:flex; justify-content:center; padding:20px 12px; min-height:100vh; }
   .card { width:100%; max-width:820px; border-radius:16px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.22); background:#fff; }
 
-  /* TOP LOGO BAR */
-  .logo-bar { background:#6AAC35; padding:8px 20px; text-align:center; display:flex; align-items:center; justify-content:center; }
+  /* LOGO BAR */
+  .logo-bar { background:#2E7D32; padding:8px 20px; text-align:center; }
   .logo-bar img { height:28px; width:auto; }
 
   /* HERO */
   .hero { width:100%; height:clamp(160px,30vw,300px); object-fit:cover; object-position:center; display:block; }
 
-  /* TITLE */
-  .title-block { background:#fff; padding:clamp(14px,3vw,20px) clamp(16px,4vw,36px) clamp(10px,2vw,14px); text-align:center; }
-  .pill { display:inline-block; background:#6AAC35; color:#fff; font-size:clamp(8px,1.5vw,10px); font-weight:700; letter-spacing:2px; text-transform:uppercase; padding:5px 16px; border-radius:20px; margin-bottom:12px; }
-  .title-line-1 { font-size:clamp(11px,2vw,14px); font-weight:700; color:#0A2350; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:6px; }
-  .title-main { font-size:clamp(18px,4vw,30px); font-weight:900; color:#0A2350; text-transform:uppercase; line-height:1.1; margin-bottom:8px; }
+  /* INTRO BLOCK */
+  .intro { background:#fff; padding:clamp(16px,3vw,28px) clamp(16px,4vw,40px); }
+  .pill { display:inline-block; background:#6AAC35; color:#fff; font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; padding:5px 16px; border-radius:20px; margin-bottom:14px; }
+  .title-main { font-size:clamp(26px,4vw,34px); font-weight:900; color:#0A2350; line-height:1.15; margin-bottom:6px; text-align:center; }
   .title-main .green { color:#6AAC35; }
-  .subtitle { font-size:clamp(10px,1.8vw,12px); font-weight:700; color:#0A2350; line-height:1.55; padding:0 10px; }
+  .subtitle-main { font-size:clamp(15px,2vw,18px); font-weight:700; color:#2E7D32; margin-bottom:16px; font-style:italic; text-align:center; }
+  .divider { border:none; border-top:2px solid #6AAC35; margin:16px 0; }
+  .invite-text { font-size:clamp(13px,1.8vw,15px); color:#333; line-height:1.7; margin-bottom:10px; }
+  .invite-text strong { color:#0A2350; }
 
-  /* BODY GRID */
-  .body { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; padding:14px; background:#fff; }
-  @media(max-width:580px) { .body { grid-template-columns:1fr; } }
+  /* SECTION HEADER */
+  .section-header { background:#2E7D32; padding:12px 20px; margin-top:0; }
+  .section-header h2 { font-size:clamp(14px,2vw,16px); font-weight:900; color:#fff; text-transform:uppercase; letter-spacing:1px; margin-bottom:3px; }
+  .section-header p { font-size:clamp(13px,1.8vw,15px); color:#fff; font-weight:400; }
 
-  .col { display:flex; flex-direction:column; border-radius:12px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,0.12); }
-  .col-head { padding:12px 14px; text-align:center; }
+  /* PALANCAS */
+  .palancas { padding:clamp(14px,2vw,20px) clamp(16px,4vw,40px); background:#f9fafb; }
+  .palancas-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px; }
+  @media(max-width:500px){ .palancas-grid { grid-template-columns:1fr; } }
+  .palanca-group { background:#fff; border-radius:10px; padding:14px 16px; border-left:4px solid #6AAC35; box-shadow:0 1px 6px rgba(0,0,0,0.07); }
+  .palanca-group.alt { border-left-color:#1B5E20; }
+  .palanca-group-title { font-size:13px; font-weight:900; color:#0A2350; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px; }
+  .palanca-item { font-size:clamp(13px,1.8vw,15px); font-weight:600; color:#1B3A1E; padding:5px 0; border-bottom:1px solid #f0f0f0; }
+  .palanca-item:last-child { border-bottom:none; }
+  .palanca-item .tag { display:inline-block; background:#E8F5E9; color:#2E7D32; font-size:9px; font-weight:700; padding:2px 7px; border-radius:10px; margin-right:5px; }
+  .palanca-item .tag-blue { background:#E8F5E9; color:#1B5E20; }
+
+  /* DECISIONS GRID */
+  .decisions { padding:14px; background:#fff; }
+  .decisions-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+  @media(max-width:580px){ .decisions-grid { grid-template-columns:1fr; } }
+  .col { display:flex; flex-direction:column; border-radius:12px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,0.10); }
+  .col-head { padding:10px 14px; text-align:center; }
   .col-1 .col-head { background:#1B5E20; }
   .col-2 .col-head { background:#2E7D32; }
   .col-3 .col-head { background:#6AAC35; }
-  .col-title { font-size:clamp(10px,1.8vw,12px); font-weight:900; color:#fff; text-transform:uppercase; line-height:1.25; }
-
-  /* Tips body — same color as header */
   .col-1 .list { background:#1B5E20; }
   .col-2 .list { background:#2E7D32; }
   .col-3 .list { background:#6AAC35; }
-
+  .col-title { font-size:10px; font-weight:700; color:#fff; text-transform:uppercase; line-height:1.25; opacity:0.9; }
   .list { list-style:none; flex:1; padding:6px 0 12px; }
-  .list li { display:flex; align-items:center; gap:8px; padding:8px 12px; border-bottom:1px solid rgba(255,255,255,0.1); }
+  .list li { display:flex; align-items:flex-start; gap:8px; padding:7px 12px; border-bottom:1px solid rgba(255,255,255,0.1); }
   .list li:last-child { border-bottom:none; }
+  .n { font-size:clamp(18px,3vw,22px); font-weight:900; min-width:26px; width:26px; text-align:center; line-height:1.2; flex-shrink:0; color:#fff; }
+  .t { font-size:clamp(12px,1.7vw,15px); font-weight:600; color:#fff; line-height:1.4; padding-top:2px; }
 
-  /* Numbers white */
-  .n { font-size:clamp(20px,3.5vw,26px); font-weight:900; min-width:30px; width:30px; text-align:center; line-height:1; flex-shrink:0; color:#fff; }
+  /* CASH GROWTH TOOLS BAR */
+  .cash-bar { background:#6AAC35; padding:16px 20px; text-align:center; border-top:5px solid #4a8a22; border-bottom:5px solid #4a8a22; }
+  .cash-bar-title { font-size:clamp(13px,2.2vw,17px); font-weight:900; color:#fff; text-transform:uppercase; letter-spacing:2px; margin-bottom:10px; }
+  .cash-tools { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; }
+  .tool-tag { background:rgba(255,255,255,0.2); color:#fff; font-size:clamp(13px,1.8vw,15px); font-weight:700; padding:6px 16px; border-radius:20px; border:1.5px solid rgba(255,255,255,0.5); }
 
-  /* Text white */
-  .t { font-size:clamp(10px,1.8vw,11.5px); font-weight:600; color:#fff; line-height:1.35; }
-  .t a { color:#A8D576; text-decoration:underline; font-weight:700; }
-
-  /* CASH IS KING BAR */
-  .cash-bar { background:#6AAC35; padding:14px 20px; text-align:center; border-top:6px solid #4a8a22; border-bottom:6px solid #4a8a22; }
-  .cash-bar span { font-family:'Montserrat',sans-serif; font-size:clamp(14px,2.5vw,20px); font-weight:900; color:#fff; text-transform:uppercase; letter-spacing:3px; }
+  /* READINGS */
+  .readings { background:#f9fafb; padding:clamp(14px,2vw,20px) clamp(16px,4vw,40px); border-top:2px solid #e0e0e0; }
+  .readings h3 { font-size:12px; font-weight:900; color:#0A2350; text-transform:uppercase; letter-spacing:1px; margin-bottom:10px; }
+  .book-item { display:flex; align-items:baseline; gap:8px; padding:5px 0; border-bottom:1px solid #eee; font-size:clamp(11px,1.6vw,13px); color:#333; }
+  .book-item:last-child { border-bottom:none; }
+  .book-dot { color:#6AAC35; font-size:16px; flex-shrink:0; }
+  .book-title { font-weight:700; color:#0A2350; }
+  .book-author { color:#666; }
 
   /* FOOTER CTA */
-  .footer-cta { background:#fff; padding:clamp(16px,3vw,24px) clamp(16px,4vw,36px); text-align:center; }
-  .cta-title { font-size:clamp(11px,2vw,13px); font-weight:900; color:#0A2350; text-transform:uppercase; letter-spacing:0.5px; line-height:1.4; margin-bottom:14px; }
-  .cta-btn { display:inline-block; background:#009ADE; color:#fff; font-family:'Montserrat',sans-serif; font-size:clamp(12px,2vw,13px); font-weight:700; text-decoration:none; padding:12px 28px; border-radius:8px; margin-bottom:18px; }
+  .footer-cta { background:#fff; padding:clamp(16px,3vw,28px) clamp(16px,4vw,40px); text-align:center; border-top:3px solid #e0e0e0; }
+  .cta-phrase { font-size:clamp(20px,3.5vw,28px); font-weight:900; color:#6AAC35; line-height:1.2; margin-bottom:4px; }
+  .cta-phrase2 { font-size:clamp(16px,2.5vw,22px); font-weight:700; color:#0A2350; line-height:1.2; margin-bottom:10px; }
+  .cta-question { font-size:clamp(12px,1.8vw,15px); font-weight:400; color:#555; margin-bottom:18px; }
+  .cta-btn { display:inline-block; background:#009ADE; color:#fff; font-family:'Montserrat',sans-serif; font-size:clamp(13px,2vw,16px); font-weight:700; text-decoration:none; padding:13px 40px; border-radius:8px; margin-bottom:22px; }
   .cta-links { list-style:none; display:flex; flex-direction:column; gap:7px; align-items:center; }
   .cta-links li { font-size:clamp(10px,1.8vw,12px); font-weight:500; color:#333; display:flex; align-items:center; gap:6px; }
   .cta-links li::before { content:"•"; color:#009ADE; font-size:15px; }
@@ -69,60 +93,109 @@
 <body>
 <div class="card">
 
-  <!-- LOGO BAR -->
+  <!-- LOGO -->
   <div class="logo-bar">
-    <img src="https://camiladelsolar-debug.github.io/scaling-tips-caja/logo-scaling.png" alt="Scaling logo"/>
+    <img src="https://camiladelsolar-debug.github.io/scaling-tips-caja/logo-scaling.png" alt="Scaling"/>
   </div>
 
   <!-- HERO -->
-  <img class="hero" src="https://camiladelsolar-debug.github.io/scaling-tips-caja/billete.png" alt="La caja no miente"/>
+  <img class="hero" src="https://camiladelsolar-debug.github.io/scaling-tips-caja/billete.png" alt="Cash is King"/>
 
-  <!-- TITLE -->
-  <div class="title-block">
-    <div class="pill">Tips de la Semana &nbsp;&middot;&nbsp; Caja</div>
-    <div class="title-line-1">Las empresas no quiebran por falta de ventas,</div>
-    <div class="title-main">QUIEBRAN POR <span class="green">FALTA DE CAJA.</span></div>
-    <div class="subtitle">10 decisiones para mejorar tu liquidez y sostener el crecimiento de tu empresa</div>
+  <!-- INTRO -->
+  <div class="intro">
+    <div class="title-main">&#191;C&#243;mo <span class="green">aumentar el efectivo</span> disponible de tu negocio?</div>
+    <div class="subtitle-main">El mejor dinero viene de clientes, no de bancos ni inversionistas.</div>
+    <hr class="divider"/>
+    <p class="invite-text">&#191;Tienes fuentes internas de efectivo para financiar tu crecimiento, aprovechar una oportunidad o sortear una crisis? Si no es as&#237;, estos tips son para ti.</p>
+    <p class="invite-text"><strong>&#191;Por qu&#233; el dinero de los bancos y los inversionistas no siempre es bueno?</strong> Si el modelo de negocios no genera efectivo operacional, el dinero de bancos e inversionistas se agotar&#225; y podr&#225;s perder tu negocio. S&#243;lo si ya ves que tu negocio genera efectivo, el dinero externo puede acelerar dicha generaci&#243;n y ser de ayuda.</p>
+    <p class="invite-text">A continuaci&#243;n, te presentamos las palancas y decisiones que te ayudar&#225;n a lograr que tu negocio genere caja.</p>
   </div>
 
-  <!-- 3 CARDS -->
-  <div class="body">
-    <div class="col col-1">
-      <div class="col-head"><div class="col-title">Fundamentos<br>de Liquidez</div></div>
-      <ul class="list">
-        <li><span class="n">1</span><span class="t">Mant&#233;n 3 meses de costo operacional en caja</span></li>
-        <li><span class="n">2</span><span class="t">Crece solo a la velocidad que tu liquidez lo permite</span></li>
-        <li><span class="n">3</span><span class="t">Comparte los n&#250;meros reales con tu equipo</span></li>
-        <li><span class="n">4</span><span class="t">Maximiza tu liquidez trabajando las <a href="https://camiladelsolar-debug.github.io/scaling-tips-caja/Poder_de_Uno.pdf" target="_blank">7 palancas del efectivo</a></span></li>
-      </ul>
-    </div>
-    <div class="col col-2">
-      <div class="col-head"><div class="col-title">Gesti&#243;n<br>de Ingresos</div></div>
-      <ul class="list">
-        <li><span class="n">5</span><span class="t">El precio es tu palanca m&#225;s poderosa, &#250;sala</span></li>
-        <li><span class="n">6</span><span class="t">Cobra antes de producir (venta no es caja)</span></li>
-      </ul>
-    </div>
-    <div class="col col-3">
-      <div class="col-head"><div class="col-title">Control de<br>Costos</div></div>
-      <ul class="list">
-        <li><span class="n">7</span><span class="t">Negocia plazos con proveedores cara a cara</span></li>
-        <li><span class="n">8</span><span class="t">El inventario es caja paralizada, min&#237;mizalo</span></li>
-        <li><span class="n">9</span><span class="t">Reduce costos fijos hasta pasarte un 10%</span></li>
-        <li><span class="n">10</span><span class="t">Fin&#225;nciate con tus clientes, no con inversionistas ni bancos</span></li>
-      </ul>
+  <!-- 7 PALANCAS -->
+  <div class="section-header">
+    <h2>7 Palancas del Efectivo</h2>
+    <p>Peque&#241;as mejoras de 1 d&#237;a o 1% hacen un gran impacto. Elige las que tengan mayor impacto en tu caja.</p>
+  </div>
+  <div class="palancas">
+    <div class="palancas-grid">
+      <div class="palanca-group">
+        <div class="palanca-group-title">Palancas de Resultado</div>
+        <div class="palanca-item"><span class="tag">%</span> Aumento de Precio</div>
+        <div class="palanca-item"><span class="tag">%</span> Aumento de Volumen de ventas</div>
+        <div class="palanca-item"><span class="tag">%</span> Disminuci&#243;n de Costo de ventas</div>
+        <div class="palanca-item"><span class="tag">%</span> Disminuci&#243;n de Costos Fijos</div>
+      </div>
+      <div class="palanca-group alt">
+        <div class="palanca-group-title">Palancas de Capital de Trabajo</div>
+        <div class="palanca-item"><span class="tag tag-blue">d&#237;as</span> Disminuci&#243;n de cuentas por cobrar</div>
+        <div class="palanca-item"><span class="tag tag-blue">d&#237;as</span> Disminuci&#243;n de inventarios</div>
+        <div class="palanca-item"><span class="tag tag-blue">d&#237;as</span> Aumento de cuentas por pagar</div>
+      </div>
     </div>
   </div>
 
-  <!-- CASH IS KING BAR -->
+  <!-- 10 DECISIONES -->
+  <div class="section-header">
+    <h2>10 Decisiones de Caja</h2>
+    <p>Para lograr la generaci&#243;n de caja desde la operaci&#243;n hay 10 decisiones que debes tomar bien.</p>
+  </div>
+  <div class="decisions">
+    <div class="decisions-grid">
+
+      <div class="col col-1">
+        <div class="col-head"><div class="col-title">Fundamentos<br>de Liquidez</div></div>
+        <ul class="list">
+          <li><span class="n">1</span><span class="t">Mant&#233;n 3 a 6 meses de costo operacional en caja</span></li>
+          <li><span class="n">2</span><span class="t">Ajusta tu crecimiento a tu liquidez</span></li>
+          <li><span class="n">3</span><span class="t">Comparte la informaci&#243;n financiera con tu equipo</span></li>
+          <li><span class="n">4</span><span class="t">Trabaja con tu equipo las 7 palancas del efectivo</span></li>
+          <li><span class="n">5</span><span class="t">Reduce costos fijos en un 10% por debajo de lo que crees alcanzable y luego vuelve si es necesario</span></li>
+        </ul>
+      </div>
+
+      <div class="col col-2">
+        <div class="col-head"><div class="col-title">Gesti&#243;n<br>de Clientes</div></div>
+        <ul class="list">
+          <li><span class="n">6</span><span class="t">No le creas al cliente cuando pide solo precio y si&#233;ntate a negociar</span></li>
+          <li><span class="n">7</span><span class="t">Gestiona tus cuentas por cobrar, como gestionas tu venta</span></li>
+          <li><span class="n">8</span><span class="t">Invol&#250;crate en la estrategia de precios</span></li>
+        </ul>
+      </div>
+
+      <div class="col col-3">
+        <div class="col-head"><div class="col-title">Gesti&#243;n de<br>Proveedores</div></div>
+        <ul class="list">
+          <li><span class="n">9</span><span class="t">Mide, revisa en equipo y minimiza el inventario donde quiera que est&#233;</span></li>
+          <li><span class="n">10</span><span class="t">Negocia con tus proveedores cara a cara pues tienen m&#225;s liquidez que t&#250;</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CASH GROWTH TOOLS -->
   <div class="cash-bar">
-    <span>"Cash is King"</span>
+    <div class="cash-bar-title">Cash Growth Tools</div>
+    <div class="cash-tools">
+      <span class="tool-tag">Cash Flow Story</span>
+      <span class="tool-tag">Power of One</span>
+      <span class="tool-tag">Ciclo de conversi&#243;n del efectivo</span>
+      <span class="tool-tag">Negociaciones de alto impacto</span>
+    </div>
+  </div>
+
+  <!-- LECTURAS RECOMENDADAS -->
+  <div class="readings">
+    <h3>Lecturas Recomendadas</h3>
+    <div class="book-item"><span class="book-dot">•</span><span><span class="book-title">Confessions of the Pricing Man</span> <span class="book-author">— Hermann Simon</span></span></div>
+    <div class="book-item"><span class="book-dot">•</span><span><span class="book-title">Customer Funded Business</span> <span class="book-author">— John Mullins</span></span></div>
+    <div class="book-item"><span class="book-dot">•</span><span><span class="book-title">Simple Numbers, Straight Talk, Big Profits</span> <span class="book-author">— Greg Crabtree</span></span></div>
   </div>
 
   <!-- FOOTER CTA -->
   <div class="footer-cta">
-    <div class="cta-title">Somos coaches de estrategia especializados en<br>mejorar los resultados de empresas</div>
-    <a class="cta-btn" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3_6UpzsLAUiZAUtekeZpVKSKlgjDGm9biH4hrW0wkUKTRwSTyTa22bUmQiZuMCpAnMV3s5e3vW" target="_blank">Agenda una reuni&#243;n con nosotros</a>
+    <div class="cta-question">&#191;Quieres escalar tu negocio?</div>
+    <a class="cta-btn" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3_6UpzsLAUiZAUtekeZpVKSKlgjDGm9biH4hrW0wkUKTRwSTyTa22bUmQiZuMCpAnMV3s5e3vW" target="_blank">Conversemos</a>
     <ul class="cta-links">
       <li>M&#225;s herramientas en <a href="https://scaling.cl/" target="_blank">www.scaling.cl</a></li>
       <li>Testimonios en nuestro canal de <a href="https://www.youtube.com/@scaling.estrategia" target="_blank">Youtube</a></li>
